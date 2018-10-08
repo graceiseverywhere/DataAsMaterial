@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title></title>
+ <link href="https://fonts.googleapis.com/css?family=Work Sans" rel="stylesheet"> 
+<style>
+body, html {
+  margin: 0;
+  height: 100%;
+  text-align: center;
+  font-family: 'Work Sans';
+  color: #999;
+}
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 1pt;
+  font-size: 20pt;
+  margin-bottom: 3px;
+}
+
+p {
+  text-align: left;
+  margin: 0;
+/*  text-transform: lowercase;*/
+  font-size: 10pt;
+  font-weight: 900;
+  width: 50%;
+  display: none;
+}
+
+#table {
+  display: table;
+  width: 100%;
+  height: 100%;
+  background-color: #ffff;
+}
+
+#centeralign {
+  display: table-cell;
+  vertical-align: top;
+}
+</style>
+</head>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript"></script>
+
+
+<body>
+  <script>
+  function typeEffect(element, speed) {
+  var text = $(element).text();
+  $(element).html('');
+  
+  var i = 0;
+  var timer = setInterval(function() {
+          if (i < text.length) {
+            $(element).append(text.charAt(i));
+            i++;
+          } else {
+            clearInterval(timer);
+          }
+        }, speed);
+}
+
+$( document ).ready(function() {
+  var speed = 75;
+  var delay = $('h1').text().length * speed + speed;
+  typeEffect($('h1'), speed);
+  setTimeout(function(){
+    $('p').css('display', 'inline-block');
+    typeEffect($('p'), speed);
+  }, delay);
+});
+  </script>
+ <span style="font-family: 'Work Sans'; font-size:11px; float:right; margin-right:50px; text-align:right; color:#000000;"">
+ Title: Wild Geese <br/>
+  By: Mary Oliver <br/>
+  Animation 4 <br/>
+  <a href="../remixindex.html"> Index </a><br/>
+  <a href="animation01.html" style="background-color:#000; color:#fff;"> next </a><br/>
+  </span>
+<div>
+</div> 
+<br/>
+<div id="table">
+  <div id="centeralign">
+    <h1>Wild Geese</h1>
+    
+<p>
+You do not have to be good.
+You do not have to walk on your knees
+for a hundred miles through the desert repenting.
+   You only have to let the soft animal of your body
+love what it loves.
+  Tell me about despair, yours, and I will tell you mine.
+Meanwhile the world goes on.
+   Meanwhile the sun and the clear pebbles of the rain
+are moving across the landscapes,
+over the prairies and the deep trees,
+the mountains and the rivers.
+    Meanwhile the wild geese, high in the clean blue air,
+are heading home again.<br />
+  Whoever you are, no matter how lonely,
+the world offers itself to your imagination,
+calls to you like the wild geese, harsh and exciting -
+over and over announcing your place
+in the family of things
+   </p>
+  </div>
+</div>
+<script type="text/javascript">
+
+</body>
+</html>
